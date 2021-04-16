@@ -3,7 +3,6 @@ import { RepositoryItem } from "./RepositoryItem";
 import '../styles/repositories.scss';
 import { useState, useEffect } from "react";
 
-
 export function RepositoryList(){
     const [repositories, setRepositories] = useState([]);
 
@@ -19,8 +18,8 @@ export function RepositoryList(){
           <ul>
               {repositories.map(repository=> {
                 return <RepositoryItem key={repository.name} repository={repository} />
-                }
-              )}
+                })
+              }
           </ul>
       </section>  
     );
